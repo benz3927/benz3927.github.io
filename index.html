@@ -52,6 +52,42 @@
 
         header {
             margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .profile-section {
+            flex: 1;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, #667eea, #764ba2) border-box;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         h1 {
@@ -254,6 +290,22 @@
                 padding: 40px 20px;
             }
 
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
             h1 {
                 font-size: 28px;
             }
@@ -268,19 +320,22 @@
 <body>
     <div class="container">
         <header>
-            <h1>Benjamin Zhao</h1>
-            <p class="tagline">📊 Mathematics & Economics @ Hamilton College</p>
-            <p class="bio">
-                Interested in AI/ML, data engineering, and ETL workflows. 
-                Building systems for data pipelines, natural language processing, and statistical analysis.
-                <br>
-                📞 609-356-2186
-            </p>
-            <div class="links">
-                <a href="mailto:bzhao@hamilton.edu">📧 Email</a>
-                <a href="https://github.com/benz3927">💻 GitHub</a>
-                <a href="https://www.linkedin.com/in/benz3927">🔗 LinkedIn</a>
+            <div class="profile-section">
+                <h1>Benjamin Zhao</h1>
+                <p class="tagline">📊 Mathematics & Economics @ Hamilton College</p>
+                <p class="bio">
+                    Interested in AI/ML, data engineering, and ETL workflows. 
+                    Building systems for data pipelines, natural language processing, and statistical analysis.
+                    <br>
+                    📞 609-356-2186
+                </p>
+                <div class="links">
+                    <a href="mailto:bzhao@hamilton.edu">📧 Email</a>
+                    <a href="https://github.com/benz3927">💻 GitHub</a>
+                    <a href="https://www.linkedin.com/in/benz3927">🔗 LinkedIn</a>
+                </div>
             </div>
+            <img src="https://media.licdn.com/dms/image/v2/C5603AQGPl3OjD_7qCQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1654735330570?e=1767830400&v=beta&t=HkwTku-epDcwmNkzgGRpqX9bFC0o8kUCyy_vLTRWtxM" alt="Benjamin Zhao" class="profile-image">
         </header>
 
     <section>
