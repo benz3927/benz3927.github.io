@@ -277,6 +277,61 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
+        .coursework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .course-category {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .course-category:nth-child(2) {
+            border-left-color: #764ba2;
+        }
+
+        .course-category:nth-child(3) {
+            border-left-color: #f093fb;
+        }
+
+        .course-category:nth-child(4) {
+            border-left-color: #f5576c;
+        }
+
+        .course-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .course-category h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course-list li {
+            font-size: 14px;
+            color: #444;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .course-list li:last-child {
+            border-bottom: none;
+        }
+
         footer {
             margin-top: 60px;
             padding-top: 30px;
@@ -429,6 +484,56 @@
                 Economics Tutor at Hamilton QSR Center (Aug 2024 - May 2025) • 
                 President of Basketball Club • Piano Accompanist at Church in Montgomery
             </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>📚 Coursework Highlights</h2>
+        <div class="coursework-grid">
+            <div class="course-category">
+                <h3>Mathematics</h3>
+                <ul class="course-list">
+                    <li>Real Analysis</li>
+                    <li>Modern Algebra</li>
+                    <li>Senior Seminar in Applied Probability</li>
+                    <li>Linear Algebra</li>
+                    <li>Multivariable Calculus</li>
+                    <li>Probability & Statistical Inference</li>
+                </ul>
+            </div>
+            
+            <div class="course-category">
+                <h3>Computer Science & ML</h3>
+                <ul class="course-list">
+                    <li>Deep Learning</li>
+                    <li>Statistical Methods for Machine Learning</li>
+                    <li>Algorithms & Data Structures</li>
+                    <li>Design Principles</li>
+                    <li>Statistical Modeling & Applications</li>
+                </ul>
+            </div>
+            
+            <div class="course-category">
+                <h3>Economics & Policy</h3>
+                <ul class="course-list">
+                    <li>Monetary Policy</li>
+                    <li>Financial Economics</li>
+                    <li>Econometrics</li>
+                    <li>International Trade</li>
+                    <li>Micro/Macroeconomic Theory</li>
+                </ul>
+            </div>
+            
+            <div class="course-category">
+                <h3>Other Fun Classes</h3>
+                <ul class="course-list">
+                    <li>Spacetime & Quantum Physics</li>
+                    <li>Shakespeare</li>
+                    <li>Conducting</li>
+                    <li>International Relations</li>
+                    <li>Political Theory</li>
+                </ul>
+            </div>
         </div>
     </section>
 
