@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Zhao</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .links a:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .project {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            border-left: 4px solid #667eea;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .project:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .project h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .project-description {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .tech-stack {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 10px;
+        }
+
+        .experience-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .name {
+                font-size: 2.2rem;
+            }
+
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="name">Benjamin Zhao</h1>
+            <p class="tagline">Mathematics & Economics @ Hamilton College</p>
+            <p class="bio">
+                Senior applying to PhD programs in Statistics and Operations Research. 
+                Interested in machine learning, econometrics, and data science applications in economics and healthcare.
+                <br>
+                GPA: 3.68 | 609-356-2186
+            </p>
+            <div class="links">
+                <a href="mailto:bzhao@hamilton.edu">📧 Email</a>
+                <a href="https://github.com/benz3927">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/benz3927">🔗 LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>🚀 Projects</h2>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>🎯 HamPlan: Course Recommendation System</h3>
+                    <a href="https://github.com/benz3927/HamPlan" class="project-link">View Code →</a>
+                </div>
+                <p class="project-description">
+                    RAG-based course recommendation chatbot using OpenAI embeddings for academic advising.
+                    Integrated 800+ courses from catalog data, 60+ PDF syllabi, and web-scraped department requirements
+                    into a unified knowledge base providing detailed course information.
+                </p>
+                <p class="tech-stack">Python • OpenAI • LangChain • RAG • Web Scraping</p>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>🏥 Medical Policy Extraction Workflow</h3>
+                    <a href="https://github.com/benz3927/Medical-Policy-Extractor" class="project-link">View Code →</a>
+                </div>
+                <p class="project-description">
+                    Python workflow using Pydantic, LangChain, and GPT-4 to automate extraction of procedure
+                    and diagnosis codes from medical policy documents. Deployed as interactive Gradio app on Hugging Face.
+                </p>
+                <p class="tech-stack">Python • Pydantic • LangChain • GPT-4 • Gradio • Hugging Face</p>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>📊 Healthcare Provider Entity Matching</h3>
+                    <a href="https://github.com/benz3927/Healthcare-Data-Queries" class="project-link">View Code →</a>
+                </div>
+                <p class="project-description">
+                    Cleaned and processed NPPES/PECOS data in AWS Athena using SQL. Developed Python algorithm
+                    applying Damerau-Levenshtein distance to match providers without NPIs based on identifiers like name, DOB, and address.
+                    Achieved 77.73% match accuracy through iterative error analysis.
+                </p>
+                <p class="tech-stack">Python • AWS Athena • SQL • String Matching • Healthcare Data</p>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>🎨 UNet++ Image Segmentation</h3>
+                    <a href="https://github.com/benz3927/unetpp-oxpet-segmentation" class="project-link">View Code →</a>
+                </div>
+                <p class="project-description">
+                    Image segmentation model achieving 80.94% mIoU on Oxford-IIIT Pet dataset.
+                    Implemented deep supervision, hybrid loss functions, and CBAM attention mechanisms.
+                </p>
+                <p class="tech-stack">PyTorch • Computer Vision • Deep Learning</p>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>📈 Bi-LSTM Sentiment Analysis</h3>
+                    <a href="https://github.com/benz3927/imdb-bilstm-sentiment" class="project-link">View Code →</a>
+                </div>
+                <p class="project-description">
+                    Capacity scaling study (256-2048 dims) on Bi-LSTM for sentiment classification.
+                    Achieved 91% accuracy on IMDB 50K dataset with systematic model analysis.
+                </p>
+                <p class="tech-stack">PyTorch Lightning • NLP • LSTM</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience & Recognition</h2>
+            
+            <div class="experience-item">
+                <h3>🏆 ASA Undergraduate Statistics Project Competition — 2nd Place</h3>
+                <p>
+                    American Statistical Association national competition (September 2022). 
+                    Autism screening analysis using Random Forests and feature ranking for Q-CHAT-10 questionnaire.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3>📚 Economics Summer Research Assistant</h3>
+                <p>
+                    Hamilton College (May - June 2025). Built database of international trade and aid flows from UN Comtrade, IMF, and World Bank
+                    using automated data pipelines to support quantitative analysis for seniors' theses.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3>🎯 Economics Tutor & Leadership</h3>
+                <p>
+                    Economics Tutor at Hamilton QSR Center (Aug 2024 - May 2025) • 
+                    President of Basketball Club • Piano Accompanist at Church in Montgomery
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">PyTorch</span>
+                <span class="skill">TensorFlow</span>
+                <span class="skill">R</span>
+                <span class="skill">C++</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Stata</span>
+                <span class="skill">MATLAB</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Azure</span>
+                <span class="skill">OpenAI</span>
+                <span class="skill">Hugging Face</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">UNIX</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Benjamin Zhao • <a href="mailto:bzhao@hamilton.edu" style="color: #667eea; text-decoration: none;">bzhao@hamilton.edu</a></p>
+        </footer>
+    </div>
+</body>
+</html>
