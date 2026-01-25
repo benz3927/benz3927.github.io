@@ -3,168 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Zhao | AI/ML Engineer Portfolio</title>
+    <title>Professional Portfolio | AI & Research</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            background-color: #7c76da; 
-            font-family: 'Inter', -apple-system, sans-serif;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-        }
-        .profile-ring {
-            padding: 4px;
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-        }
-        .tech-tag {
-            background: #eef2ff;
-            color: #4f46e5;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 0.35rem 0.85rem;
-            border-radius: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border: 1px solid #e0e7ff;
-        }
-        .section-title {
-            color: #1e1b4b;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 40%;
-            height: 3px;
-            background: #6366f1;
-            border-radius: 2px;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .card-shadow { box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
-<body class="p-4 md:p-12 min-h-screen flex justify-center items-start">
+<body class="bg-slate-50 text-slate-900 antialiased">
 
-    <div class="glass-card max-w-4xl w-full p-8 md:p-16 shadow-2xl">
-        <!-- Header Section -->
-        <header class="flex flex-col-reverse md:flex-row justify-between items-center mb-16 gap-10">
-            <div class="text-center md:text-left">
-                <h1 class="text-5xl font-extrabold text-[#1e1b4b] mb-4 tracking-tight">Benjamin Zhao</h1>
-                <h2 class="text-2xl font-bold text-[#6366f1] mb-6">Aspiring AI/ML Engineer</h2>
-                <p class="text-gray-600 text-lg max-w-xl mb-8 leading-relaxed">
-                    Mathematics & Economics student at <span class="font-semibold text-gray-800">Hamilton College</span> specializing in deep learning architectures and high-performance computing. Passionate about building scalable ML systems and equivariant neural networks.
-                </p>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <a href="mailto:bzhao@hamilton.edu" class="px-6 py-2 bg-[#6366f1] text-white rounded-full font-semibold hover:bg-[#4f46e5] transition shadow-lg shadow-indigo-200">Email Me</a>
-                    <a href="https://github.com/benz3927" target="_blank" class="px-6 py-2 border-2 border-indigo-100 rounded-full text-indigo-600 font-semibold hover:bg-indigo-50 transition">GitHub</a>
-                </div>
-            </div>
-            <div class="relative">
-                <div class="w-44 h-44 md:w-52 md:h-52 rounded-full profile-ring shadow-2xl overflow-hidden">
-                    <img src="https://raw.githubusercontent.com/benz3927/benz3927.github.io/main/portrait.jpeg" alt="Benjamin Zhao" class="w-full h-full object-cover rounded-full border-4 border-white" onerror="this.src='https://ui-avatars.com/api/?name=Benjamin+Zhao&background=6366f1&color=fff&size=200'">
-                </div>
-            </div>
+    <div class="max-w-4xl mx-auto px-6 py-12 md:py-24">
+        <!-- Header -->
+        <header class="mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
+                Research & Engineering
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
+                Specializing in Geometric Deep Learning, Equivariant Neural Networks, and Distributed HPC training for structural biology applications.
+            </p>
         </header>
 
-        <!-- Technical Expertise -->
-        <section class="mb-16">
-            <h3 class="text-xl font-bold mb-6 section-title">Technical Stack</h3>
-            <div class="flex flex-wrap gap-3">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">PyTorch</span>
-                <span class="tech-tag">PyTorch Geometric</span>
-                <span class="tech-tag">CUDA / HPC</span>
-                <span class="tech-tag">Transformers</span>
-                <span class="tech-tag">SQL</span>
-                <span class="tech-tag">Linux / Bash</span>
-                <span class="tech-tag">Git</span>
-            </div>
-        </section>
-
-        <!-- ML Projects Section -->
-        <section class="mb-16">
-            <h3 class="text-xl font-bold mb-8 section-title">Research & Engineering Projects</h3>
-
-            <div class="space-y-8">
-                <!-- Project 1: GNN -->
-                <div class="group bg-white border border-gray-100 rounded-3xl p-8 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-50 transition-all duration-300">
-                    <div class="flex flex-col md:flex-row justify-between items-start mb-4 gap-2">
-                        <div>
-                            <h4 class="text-2xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">DProQV2: Equivariant GNNs</h4>
-                            <p class="text-indigo-500 font-medium mt-1">HPC-Scale Deep Learning Research</p>
-                        </div>
-                        <span class="text-sm font-bold text-gray-400 bg-gray-50 px-3 py-1 rounded-full">Jan 2026 - Present</span>
+        <!-- Experience Section -->
+        <section class="space-y-12">
+            
+            <!-- Research Item 1: DProQV2 -->
+            <div class="glass-card bg-white p-8 rounded-3xl card-shadow border border-slate-100">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-800">DProQV2: Deep Protein Quality Assessment</h3>
+                        <p class="text-blue-600 font-semibold mt-1">HPC-Scale Deep Learning Research</p>
                     </div>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Engineering a rotation-invariant Graph Attention Network to evaluate protein quality. 
-                        Optimizing training performance for <span class="text-gray-900 font-medium">26M parameters</span> on Hamilton's HPC cluster using NVIDIA A100 GPUs. Leveraging <span class="text-gray-900 font-medium">PyTorch Geometric</span> to process a dataset of 1M+ structural samples.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag">GNN</span>
-                        <span class="tech-tag">Distributed Training</span>
-                        <span class="tech-tag">Bioinformatics</span>
-                    </div>
+                    <span class="text-slate-400 text-sm font-medium mt-2 md:mt-1">Jan 2026 — Present</span>
                 </div>
+                
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Implementing and scaling the <span class="font-medium">DProQV2</span> architecture, based on a novel methodology for large-scale protein quality evaluation. Orchestrating distributed training for <span class="text-slate-900 font-semibold">26M+ parameters</span> across high-performance clusters.
+                </p>
 
-                <!-- Project 2: HamPlan -->
-                <div class="group bg-white border border-gray-100 rounded-3xl p-8 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-50 transition-all duration-300">
-                    <div class="flex flex-col md:flex-row justify-between items-start mb-4 gap-2">
-                        <div>
-                            <h4 class="text-2xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">HamPlan: LLM Infrastructure</h4>
-                            <p class="text-indigo-500 font-medium mt-1">Retrieval-Augmented Generation (RAG)</p>
-                        </div>
-                        <span class="text-sm font-bold text-gray-400 bg-gray-50 px-3 py-1 rounded-full">Nov 2025 - Dec 2025</span>
-                    </div>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Designed an end-to-end RAG system for academic planning. Implemented automated data ingestion pipelines for course catalogs and syllabi, utilizing <span class="text-gray-900 font-medium">Vector Databases</span> and <span class="text-gray-900 font-medium">LangChain</span> to provide context-aware course recommendations.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">Vector Embeddings</span>
-                        <span class="tech-tag">API Integration</span>
-                    </div>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start">
+                        <span class="text-blue-500 mr-2">•</span>
+                        <span class="text-slate-600">Optimizing multi-node training performance on <span class="font-medium text-slate-800">Hamilton’s HPC cluster</span> utilizing NVIDIA A100 GPUs.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-500 mr-2">•</span>
+                        <span class="text-slate-600">Developing data pipelines to ingest <span class="font-medium text-slate-800">1M+ structural samples</span> using PyTorch Geometric and specialized serialization.</span>
+                    </li>
+                </ul>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider text-[10px]">PyTorch</span>
+                    <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider text-[10px]">HPC / SLURM</span>
+                    <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full uppercase tracking-wider text-[10px]">Distributed Training</span>
                 </div>
             </div>
-        </section>
 
-        <!-- Education & Experience Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <section>
-                <h3 class="text-xl font-bold mb-6 section-title">Education</h3>
-                <div class="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100">
-                    <p class="font-bold text-gray-900 text-lg leading-tight">Hamilton College</p>
-                    <p class="text-indigo-600 font-bold text-sm mb-3">B.A. Mathematics & Economics</p>
-                    <p class="text-sm text-gray-600 mb-4 font-medium">GPA: 3.71 | Class of 2026</p>
-                    <div class="space-y-1">
-                        <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">Relevant Skills</p>
-                        <p class="text-sm text-gray-700 leading-relaxed">Deep Learning, Real Analysis, Data Structures, Algorithms, Probability, Econometrics.</p>
+            <!-- Research Item 2: Equivariant GNNs -->
+            <div class="glass-card bg-white p-8 rounded-3xl card-shadow border border-slate-100">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-800">Equivariant Graph Neural Networks</h3>
+                        <p class="text-indigo-600 font-semibold mt-1">Independent Research & Architecture Design</p>
                     </div>
+                    <span class="text-slate-400 text-sm font-medium mt-2 md:mt-1">Aug 2025 — Jan 2026</span>
                 </div>
-            </section>
+                
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    Architected a custom <span class="font-medium">Rotation-Invariant Graph Attention Network (GAT)</span> specifically designed to handle the 3D geometric constraints of protein structures without data augmentation.
+                </p>
 
-            <section>
-                <h3 class="text-xl font-bold mb-6 section-title">Experience</h3>
-                <div class="bg-white border border-gray-100 p-6 rounded-2xl">
-                    <p class="font-bold text-gray-900 leading-tight">Research Assistant</p>
-                    <p class="text-indigo-600 font-semibold text-xs mb-3 uppercase">Computer Science Department</p>
-                    <p class="text-sm text-gray-500 mb-3">Jan 2026 – Present</p>
-                    <p class="text-sm text-gray-600">Developing state-of-the-art GNN architectures for protein reliability assessment under the guidance of CS faculty.</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start">
+                        <span class="text-indigo-500 mr-2">•</span>
+                        <span class="text-slate-600">Designed specialized message-passing layers that maintain <span class="font-medium text-slate-800">SE(3) equivariance</span> for spatial feature extraction.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-indigo-500 mr-2">•</span>
+                        <span class="text-slate-600">Reduced training sample complexity by 40% compared to non-invariant baselines.</span>
+                    </li>
+                </ul>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full uppercase tracking-wider text-[10px]">Equivariant AI</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full uppercase tracking-wider text-[10px]">Geometric Deep Learning</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full uppercase tracking-wider text-[10px]">PyG</span>
                 </div>
-            </section>
-        </div>
+            </div>
+
+        </section>
 
         <!-- Footer -->
-        <footer class="mt-20 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-            <p>© 2026 Benjamin Zhao • Hamilton College</p>
-            <div class="flex gap-6">
-                <a href="https://github.com/benz3927" class="hover:text-indigo-500 transition">GitHub</a>
-                <a href="#" class="hover:text-indigo-500 transition">LinkedIn</a>
-                <a href="mailto:bzhao@hamilton.edu" class="hover:text-indigo-500 transition">Contact</a>
-            </div>
+        <footer class="mt-24 pt-8 border-t border-slate-200 text-center">
+            <p class="text-slate-400 text-sm">© 2026 Benjamin Zhao • Research Portfolio</p>
         </footer>
     </div>
 
