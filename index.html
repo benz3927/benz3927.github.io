@@ -3,408 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Zhao | Portfolio</title>
+    <title>Benjamin Zhao</title>
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --bg-page: #7c76da; /* Matches the purple background in the screenshot */
+            --bg-card: #ffffff;
+            --bg-tag: #f3f4f6;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --primary: #667eea;
-            --secondary: #764ba2;
-            --accent: #f093fb;
-            --text-dark: #1a1a1a;
-            --text-light: #444;
-            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            max-width: 900px;
-            margin: 0 auto;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: var(--text-main);
+            background-color: var(--bg-page);
             padding: 40px 20px;
-            background: var(--bg-gradient);
             min-height: 100vh;
         }
 
         .container {
-            background: white;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            padding: 60px 50px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Animated top border */
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 6px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), #f5576c);
-            background-size: 400% 400%;
-            animation: gradient-flow 15s ease infinite;
-        }
-
-        @keyframes gradient-flow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 60px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         header {
-            margin-bottom: 60px;
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 60px;
             gap: 40px;
         }
 
-        .profile-section {
+        .header-content {
             flex: 1;
         }
 
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            /* Update this to your local filename */
-            background: #eee; 
-            border: 4px solid white;
-            outline: 2px solid var(--primary);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .profile-image:hover {
-            transform: scale(1.08) rotate(3deg);
-        }
-
         h1 {
-            font-size: clamp(32px, 5vw, 48px);
+            font-size: 48px;
             font-weight: 800;
-            margin-bottom: 8px;
-            letter-spacing: -1.5px;
-            background: var(--bg-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary);
+            margin-bottom: 12px;
+            letter-spacing: -0.025em;
         }
 
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--secondary);
+        .headline {
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 15px;
+            color: #7c3aed;
+            margin-bottom: 24px;
         }
 
         .bio {
             font-size: 16px;
-            color: var(--text-light);
-            margin-bottom: 25px;
+            color: var(--text-muted);
             max-width: 500px;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
 
-        .links {
+        .contact-links {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
         }
 
-        .links a {
-            color: var(--primary);
+        .btn {
             text-decoration: none;
+            padding: 8px 24px;
+            border-radius: 9999px;
+            border: 1px solid #e5e7eb;
+            color: var(--primary);
+            font-weight: 500;
             font-size: 14px;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: 2px solid #e2e8f0;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            transition: all 0.2s;
         }
 
-        .links a:hover {
+        .btn:hover {
+            background-color: #f9fafb;
             border-color: var(--primary);
-            background: rgba(102, 126, 234, 0.05);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .profile-container {
+            position: relative;
+        }
+
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e0e7ff;
+            padding: 4px;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
         }
 
         section {
-            margin-bottom: 60px;
+            margin-bottom: 48px;
         }
 
         h2 {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        h2::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: #eee;
-        }
-
-        .project {
-            margin-bottom: 25px;
-            padding: 30px;
-            border-radius: 16px;
+        .project-card {
             background: #fafafa;
-            border: 1px solid #f0f0f0;
-            transition: all 0.3s ease;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 1px solid #f3f4f6;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .project:hover {
-            background: white;
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            transform: scale(1.01);
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
 
-        .project-header {
+        .project-top {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 12px;
+            align-items: center;
+            margin-bottom: 16px;
         }
 
-        .project h3 {
-            font-size: 19px;
-            color: var(--text-dark);
+        .project-top h3 {
+            font-size: 18px;
+            font-weight: 700;
         }
 
-        .project-link {
+        .source-link {
             font-size: 13px;
             color: var(--primary);
-            font-weight: 600;
             text-decoration: none;
-            background: white;
+            background: #ffffff;
             padding: 4px 12px;
-            border-radius: 4px;
-            border: 1px solid #eee;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            font-weight: 600;
         }
 
-        .tech-stack {
-            margin-top: 15px;
+        .project-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .tech-tags {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
 
-        .tech-badge {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 700;
-            color: #666;
-            background: #eee;
-            padding: 2px 8px;
+        .tag {
+            background: var(--bg-tag);
+            color: #4b5563;
+            padding: 4px 12px;
             border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        .award {
-            padding: 20px;
-            border-radius: 12px;
-            background: white;
-            border: 1px solid #f0f0f0;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--primary);
+        .award-card {
+            border-left: 3px solid var(--primary);
+            padding: 16px 24px;
+            background: #fcfcfc;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 16px;
         }
 
-        .coursework-grid {
+        .award-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .award-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .course-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            gap: 24px;
         }
 
-        .course-category h3 {
-            font-size: 15px;
-            margin-bottom: 10px;
-            color: var(--secondary);
+        .course-cat h4 {
+            font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            letter-spacing: 0.05em;
         }
 
         .course-list {
             list-style: none;
             font-size: 14px;
-            color: var(--text-light);
+            color: var(--text-muted);
         }
 
         .course-list li {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
         }
 
-        .skills {
+        .skills-wrap {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        .skill {
-            background: #f1f5f9;
-            color: #475569;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 14px;
+        .skill-pill {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
             font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .skill:hover {
-            background: var(--primary);
-            color: white;
+            color: var(--text-muted);
         }
 
         footer {
-            margin-top: 40px;
+            margin-top: 80px;
             text-align: center;
-            font-size: 14px;
-            color: rgba(255,255,255,0.8);
+            font-size: 13px;
+            color: #9ca3af;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 30px;
         }
 
         @media (max-width: 768px) {
-            .container { padding: 40px 25px; }
             header { flex-direction: column-reverse; text-align: center; }
-            .bio { margin: 0 auto 25px; }
-            .links { justify-content: center; }
-            .project-header { flex-direction: column; gap: 10px; }
+            .header-content { display: flex; flex-direction: column; align-items: center; }
+            .bio { text-align: center; }
+            .container { padding: 30px; }
+            h1 { font-size: 36px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="profile-section">
+            <div class="header-content">
                 <h1>Benjamin Zhao</h1>
-                <p class="tagline">Mathematics & Economics @ Hamilton College</p>
+                <div class="headline">Mathematics & Economics @ Hamilton College</div>
                 <p class="bio">
                     Aspiring Data Engineer interested in AI/ML and ETL workflows. 
                     Building robust systems for data pipelines and statistical analysis.
+                    <br><br>
+                    📞 609-356-2186
                 </p>
-                <div class="links">
-                    <a href="mailto:bzhao@hamilton.edu">Email</a>
-                    <a href="https://github.com/benz3927">GitHub</a>
-                    <a href="https://www.linkedin.com/in/benz3927">LinkedIn</a>
+                <div class="contact-links">
+                    <a href="mailto:bzhao@hamilton.edu" class="btn">Email</a>
+                    <a href="https://github.com/benz3927" class="btn">GitHub</a>
+                    <a href="https://www.linkedin.com/in/benz3927" class="btn">LinkedIn</a>
                 </div>
             </div>
-            <!-- PORTRAIT.JPEG IS USED HERE -->
-            <img src="portrait.jpeg" alt="Benjamin Zhao" class="profile-image" onerror="this.src='https://ui-avatars.com/api/?name=Benjamin+Zhao&background=667eea&color=fff&size=200'">
+            <div class="profile-container">
+                <!-- Using your portrait.jpeg as requested -->
+                <img src="portrait.jpeg" alt="Benjamin Zhao" class="profile-image" onerror="this.src='https://ui-avatars.com/api/?name=Benjamin+Zhao&background=6366f1&color=fff&size=200'">
+            </div>
         </header>
 
-        <section>
+        <section id="projects">
             <h2>🚀 Featured Projects</h2>
-            
-            <div class="project">
-                <div class="project-header">
+
+            <div class="project-card">
+                <div class="project-top">
                     <h3>HamPlan: Course Recommendation</h3>
-                    <a href="https://github.com/benz3927/HamPlan" class="project-link">Source Code →</a>
+                    <a href="https://github.com/benz3927/HamPlan" class="source-link">Source Code →</a>
                 </div>
-                <p>RAG-based course recommendation chatbot using OpenAI embeddings. Integrated 800+ courses and 60+ syllabi into a unified knowledge base.</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">LangChain</span>
-                    <span class="tech-badge">OpenAI</span>
-                    <span class="tech-badge">RAG</span>
+                <p class="project-desc">RAG-based course recommendation chatbot using OpenAI embeddings. Integrated 800+ courses and 60+ syllabi into a unified knowledge base for automated academic advising.</p>
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">LangChain</span>
+                    <span class="tag">OpenAI</span>
+                    <span class="tag">RAG</span>
                 </div>
             </div>
 
-            <div class="project">
-                <div class="project-header">
+            <div class="project-card">
+                <div class="project-top">
                     <h3>Medical Policy Extraction</h3>
-                    <a href="https://github.com/benz3927/Medical-Policy-Extractor" class="project-link">Source Code →</a>
+                    <a href="https://github.com/benz3927/Medical-Policy-Extractor" class="source-link">Source Code →</a>
                 </div>
-                <p>Automated extraction of procedure and diagnosis codes from medical documents using GPT-4 and Pydantic.</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">GPT-4</span>
-                    <span class="tech-badge">Pydantic</span>
-                    <span class="tech-badge">Gradio</span>
+                <p class="project-desc">Automated extraction of procedure and diagnosis codes from complex medical PDFs using GPT-4 and Pydantic. Deployed as a tool on Hugging Face.</p>
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Pydantic</span>
+                    <span class="tag">GPT-4</span>
+                    <span class="tag">Gradio</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-top">
+                    <h3>Healthcare Entity Matching</h3>
+                    <a href="https://github.com/benz3927/Healthcare-Data-Queries" class="source-link">Source Code →</a>
+                </div>
+                <p class="project-desc">ETL workflow cleaning NPPES/PECOS data in AWS Athena. Developed string-matching algorithms to link provider identities without unique IDs with 77% accuracy.</p>
+                <div class="tech-tags">
+                    <span class="tag">SQL</span>
+                    <span class="tag">AWS Athena</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-top">
+                    <h3>UNet++ Image Segmentation</h3>
+                    <a href="https://github.com/benz3927/unetpp-oxpet-segmentation" class="source-link">Source Code →</a>
+                </div>
+                <p class="project-desc">Computer vision model achieving 80.94% mIoU on the Oxford Pet dataset. Implemented deep supervision and CBAM attention modules.</p>
+                <div class="tech-tags">
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Deep Learning</span>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>💡 Technical Skills</h2>
-            <div class="skills">
-                <span class="skill">Python</span>
-                <span class="skill">PyTorch</span>
-                <span class="skill">SQL</span>
-                <span class="skill">AWS Athena</span>
-                <span class="skill">LangChain</span>
-                <span class="skill">C++</span>
-                <span class="skill">R</span>
-                <span class="skill">Stata</span>
-                <span class="skill">Docker</span>
-                <span class="skill">ETL</span>
+        <section id="experience">
+            <h2>🏆 Experience</h2>
+            <div class="award-card">
+                <h3>ASA Statistics Project Competition — 2nd Place</h3>
+                <p>National winner (2022). Applied Random Forests to Autism screening data to rank diagnostic features.</p>
+            </div>
+            <div class="award-card">
+                <h3>Economics Research Assistant</h3>
+                <p>Hamilton College. Built automated data pipelines pulling from UN Comtrade and World Bank APIs for quantitative thesis support.</p>
+            </div>
+            <div class="award-card">
+                <h3>Economics Tutor @ QSR Center</h3>
+                <p>Supporting peers in statistical modeling, linear algebra, and econometrics fundamentals.</p>
             </div>
         </section>
 
-        <section>
+        <section id="coursework">
             <h2>📚 Coursework</h2>
-            <div class="coursework-grid">
-                <div class="course-category">
-                    <h3>Math</h3>
+            <div class="course-grid">
+                <div class="course-cat">
+                    <h4>Math & Stats</h4>
                     <ul class="course-list">
                         <li>Real Analysis</li>
                         <li>Modern Algebra</li>
-                        <li>Probability</li>
+                        <li>Applied Probability</li>
+                        <li>Linear Algebra</li>
                     </ul>
                 </div>
-                <div class="course-category">
-                    <h3>CS & ML</h3>
+                <div class="course-cat">
+                    <h4>CS & AI</h4>
                     <ul class="course-list">
                         <li>Deep Learning</li>
                         <li>Algorithms</li>
                         <li>Statistical ML</li>
+                        <li>Design Principles</li>
                     </ul>
                 </div>
-                <div class="course-category">
-                    <h3>Economics</h3>
+                <div class="course-cat">
+                    <h4>Economics</h4>
                     <ul class="course-list">
                         <li>Econometrics</li>
                         <li>Monetary Policy</li>
                         <li>Financial Econ</li>
+                        <li>International Trade</li>
                     </ul>
                 </div>
             </div>
         </section>
+
+        <section id="skills">
+            <h2>💡 Skills</h2>
+            <div class="skills-wrap">
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">PyTorch</span>
+                <span class="skill-pill">SQL</span>
+                <span class="skill-pill">R</span>
+                <span class="skill-pill">AWS</span>
+                <span class="skill-pill">Azure</span>
+                <span class="skill-pill">C++</span>
+                <span class="skill-pill">OpenAI</span>
+                <span class="skill-pill">Hugging Face</span>
+                <span class="skill-pill">UNIX</span>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Benjamin Zhao • Mathematics & Economics at Hamilton College</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>© 2025 Benjamin Zhao • Built with passion and code.</p>
-    </footer>
-
-    <script>
-        // Intersection Observer for fade-in animations
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.project, .award, .course-category').forEach(el => {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(20px)";
-            el.style.transition = "all 0.6s ease-out";
-            observer.observe(el);
-        });
-    </script>
 </body>
 </html>
